@@ -18,3 +18,16 @@ cd build
 cmake ..
 make
 ```
+
+# Run
+
+Run the server
+```bash
+./grpcserver
+```
+
+Run the client
+```bash
+./grpcclient
+```
+
