@@ -25,14 +25,14 @@ message AddressBook {
     repeated Person people = 1;
 }
 
-message HelloRequest {
-    string name = 1;
+message PrimeRequest {
+    int64 number = 1;
 }
 
-message HelloReply {
-    string message = 1;
+message PrimeResponse {
+    int64 prime = 1;
 }
 
-service Greeter {
-    rpc SayHello(HelloRequest) returns (HelloReply) {}
+service Generator {
+    rpc SayPrime(PrimeRequest) returns (PrimeResponse) {}
 }
