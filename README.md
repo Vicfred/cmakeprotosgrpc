@@ -1,4 +1,5 @@
 # Requirements
-  *CMake
-  *google protocol buffers
-  *google gRPC
+
+* CMake
+* google protocol buffers
+* google gRPC
