@@ -1,5 +1,13 @@
 # Requirements
 
 * CMake
-* google protocol buffers
-* google gRPC
+* Google protocol buffers
+* Google gRPC
+
+# How to build
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
