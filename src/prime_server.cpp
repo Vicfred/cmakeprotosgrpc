@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include <grpcpp/grpcpp.h>
+#include <grpc++/grpc++.h>
 
 #include "foo.grpc.pb.h"
 
