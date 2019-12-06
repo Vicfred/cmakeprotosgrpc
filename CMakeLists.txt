@@ -12,6 +12,8 @@ find_package(GRPC REQUIRED)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS protos/foo.proto)
 grpc_generate_cpp(GRPC_SRCS GRPC_HDRS protos/foo.proto)
+message(${GRPC_SRCS})
+message(${GRPC_HDRS})
 
 add_executable(protoreader src/reader.cpp ${GRPC_SRCS})
 add_executable(protowriter src/writer.cpp ${GRPC_SRCS})
