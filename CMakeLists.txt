@@ -7,11 +7,6 @@ set(CMAKE_CXX_STANDARD 14)
 # Cmake find modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set(PROTOS
-        ${CMAKE_CURRENT_SOURCE_DIR}/protos/foo.proto
-    )
-set(PROTO_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/protos)
-
 find_package(Protobuf REQUIRED)
 find_package(GRPC REQUIRED)
 include_directories(${Protobuf_INCLUDE_DIRS})
@@ -25,5 +20,5 @@ add_executable(grpcclient src/prime_client.cpp ${PROTO_SRCS} ${GRPC_SRCS})
 add_executable(grpcserver src/prime_server.cpp ${PROTO_SRCS} ${GRPC_SRCS})
 target_link_libraries(protoreader ${Protobuf_LIBRARIES})
 target_link_libraries(protowriter ${Protobuf_LIBRARIES})
-target_link_libraries(grpcclient gRPC::grpc++_reflection ${Protobuf_LIBRARIES})
-target_link_libraries(grpcserver gRPC::grpc++_reflection ${Protobuf_LIBRARIES})
+target_link_libraries(grpcclient gRPC::grpc ${Protobuf_LIBRARIES})
+target_link_libraries(grpcserver gRPC::grpc ${Protobuf_LIBRARIES})

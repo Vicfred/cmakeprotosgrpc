@@ -5,7 +5,7 @@
 
 #include <grpc++/grpc++.h>
 
-#include "foo.grpc.pb.h"
+#include "protos/foo.grpc.pb.h"
 
 using grpc::Channel;
 using grpc::ClientContext;

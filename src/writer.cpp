@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "foo.pb.h"
+#include "protos/foo.pb.h"
 
 using namespace std;
 
