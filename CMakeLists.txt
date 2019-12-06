@@ -9,7 +9,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 find_package(Protobuf REQUIRED)
 find_package(GRPC REQUIRED)
-#include_directories(${Protobuf_INCLUDE_DIRS})
+include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS protos/foo.proto)
 grpc_generate_cpp(GRPC_SRCS GRPC_HDRS protos/foo.proto)
